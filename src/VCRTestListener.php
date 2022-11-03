@@ -50,7 +50,7 @@ final class VCRTestListener implements TestListener
         }
 
         // If the cassette name ends in .json, then use the JSON storage format
-        if (substr($cassetteName, -5) === '.json') {
+        if (str_ends_with($cassetteName, '.json')) {
             VCR::configure()->setStorage('json');
         }
 
